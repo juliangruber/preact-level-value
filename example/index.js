@@ -1,18 +1,9 @@
 import { h, render, Component } from 'preact'
 import level from 'level'
+import { on } from '..'
 
 const db = level('/tmp/level-react')
 window.db = db
-
-const on = (db, key, fn) => {
-  const onput = (_key, value) => _key === key && fn(value)
-  db.on('put', onput)
-  db.get(key, (err, value) => {
-    if (value) fn(value)
-  })
-  const stop = () => db.removeListener('put', onput)
-  return { stop }
-}
 
 class Example extends Component {
   constructor () {

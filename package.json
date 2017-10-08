@@ -1,0 +1,33 @@
+{
+  "name": "level-react",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd example && webpack",
+    "start": "npm run build && electron-quick --dev example/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rebuild": "npm rebuild --runtime=electron --target=$(electron --version) --abi=$(electron --abi) --disturl=\"https://atom.io/download/atom-shell\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliangruber/level-react.git"
+  },
+  "author": "Julian Gruber (mail@juliangruber.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juliangruber/level-react/issues"
+  },
+  "homepage": "https://github.com/juliangruber/level-react#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-quick": "^1.2.0",
+    "level": "^2.0.0-rc3",
+    "preact": "^8.2.5",
+    "webpack": "^3.6.0"
+  }
+}

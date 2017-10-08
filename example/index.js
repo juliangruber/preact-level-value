@@ -4,27 +4,29 @@ import level from 'level'
 const db = level('/tmp/level-react')
 window.db = db
 
+const on = (db, key, fn) => {
+  const onput = (_key, value) => _key === key && fn(value)
+  db.on('put', onput)
+  db.get(key, (err, value) => {
+    if (value) fn(value)
+  })
+  const stop = () => db.removeListener('put', onput)
+  return { stop }
+}
+
 class Example extends Component {
   constructor () {
     super()
     this.state = { value: '' }
-    this._update = this.update.bind(this)
-  }
-
-  update (key, value) {
-    if (key === 'key') this.setState({ value: value })
+    this.subscription = null
   }
 
   componentDidMount () {
-    db.on('put', this._update)
-    db.get('key', (err, value) => {
-      if (err) throw err
-      this._update('key', value)
-    })
+    this.subscription = on(db, 'key', value => this.setState({ value }))
   }
 
   componentWillUnmount () {
-    db.removeListener('put', this._update)
+    this.subscription.stop()
   }
 
   render () {

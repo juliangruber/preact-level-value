@@ -22,7 +22,7 @@ class Example extends Component {
 
 Now the `<Value />` component will always reflect the value you have stored in your database at `key`.
 
-Find a full example in [/example](/juliangruber/preact-level-value/tree/master/example):
+Find a full example in [/example](/tree/master/example):
 
 ```bash
 $ npm install

@@ -30,6 +30,8 @@ $ npm run rebuild
 $ npm start
 ```
 
+![screenshot](screenshot.png)
+
 ## Installation
 
 ```bash

@@ -5,9 +5,6 @@ module.exports = {
     filename: 'build.js',
     libraryTarget: 'commonjs2'
   },
-  node: {
-    __dirname: true
-  },
   module: {
     rules: [
       {

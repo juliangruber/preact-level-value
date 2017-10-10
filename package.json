@@ -1,24 +1,15 @@
 {
-  "name": "level-react",
+  "name": "preact-level-value",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Live updating leveldb value component for preact",
   "scripts": {
     "build": "cd example && webpack",
     "start": "npm run build && electron-quick --dev example/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "rebuild": "npm rebuild --runtime=electron --target=$(electron --version) --abi=$(electron --abi) --disturl=\"https://atom.io/download/atom-shell\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/juliangruber/level-react.git"
-  },
+  "repository": "juliangruber/preact-level-value",
   "author": "Julian Gruber (mail@juliangruber.com)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/juliangruber/level-react/issues"
-  },
-  "homepage": "https://github.com/juliangruber/level-react#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

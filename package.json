@@ -18,7 +18,9 @@
     "babel-preset-react": "^6.24.1",
     "electron-quick": "^1.2.0",
     "level": "^2.0.0-rc3",
-    "preact": "^8.2.5",
     "webpack": "^3.6.0"
+  },
+  "dependencies": {
+    "preact": "^8.2.5"
   }
 }

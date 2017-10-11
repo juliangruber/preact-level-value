@@ -1,6 +1,6 @@
 {
   "name": "preact-level-value",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Live updating leveldb value component for preact",
   "scripts": {
     "build": "cd example && webpack",
